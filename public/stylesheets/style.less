@@ -13,10 +13,17 @@ body {
   width: 100vw;
 }
 
-#svgmain {
+#svg_main {
   padding-top: 50px;
 }
 
 rect {
   fill: url("#pattern-0");;
+}
+
+circle.hit {
+  pointer-events: none;
+  fill: transparent;
+  stroke: red;
+  stroke-width: 3px;
 }

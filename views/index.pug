@@ -3,7 +3,7 @@ extends layout
 block content
     #main
         #status(v-text="status_text")
-        svg#svgmain(width="480" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+        svg#svg_main(width="480" viewBox="0 0 480 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
             defs
                 pattern#pattern-0(x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse" viewBox="0 0 100 100")
                     line(style="stroke: rgb(47, 47, 147);" x1="0" y1="0" x2="0" y2="100")
@@ -15,3 +15,4 @@ block content
                 @pointermove="move"
                 @pointerup="end"
             )
+            circle.hit(:cx="x" :cy="y" r="30" v-if="show_circle")
