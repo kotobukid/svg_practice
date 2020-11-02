@@ -7,7 +7,7 @@ window.onload = function () {
             };
         },
         methods: {
-            touchstart() {
+            start() {
                 this.status_text = 'TOUCH START';
             },
             leave() {
@@ -16,11 +16,9 @@ window.onload = function () {
             move() {
                 this.status_text = 'MOVE';
             },
-            touchend() {
+            end() {
                 this.status_text = 'TOUCH END';
             }
         }
     });
-
-
-}
+};
